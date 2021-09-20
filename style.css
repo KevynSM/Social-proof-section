@@ -79,7 +79,7 @@ body {
 
 .cards {
     grid-area: cards;
-    margin-top: 1.5rem;  
+    margin-top: 1.5rem;      
 }
 
 .card {
@@ -122,4 +122,124 @@ body {
 .card p {
     margin-top: 1rem;
     line-height: 1.5rem;
+}
+
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .cards {
+        align-self: end;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        height: 100vh;
+        justify-content: center;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 40% 6% 47%;
+        /* grid-template-rows: 50% 50%; */
+        grid-template-areas:
+            "header header header rated rated  rated"     
+            ". . . . . ."       
+            "cards cards cards cards cards cards"
+        ;    
+        width: 98%;
+        max-width: 1008px;
+        height: 100%;
+        max-height: 650px;
+    }
+
+    .header {        
+        text-align: left;
+        /* padding-right: 3rem; */
+        margin-top: 2.5rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+        padding-right: 8rem;        
+    }
+
+    .header p {
+        padding-right: 4rem;
+        font-size: 0.95rem;
+    }
+
+    .rateds {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "retad-a"
+            "retad-b"
+            "retad-c"
+        ;
+    }
+    
+    .rated {
+        margin-bottom: 0;
+        width: 80%;
+        height: 70%;
+    }
+
+    .rated-stars {
+        display: inline;
+        margin-right: 1.5rem;        
+    }
+
+    .rated h2 {
+        display: inline;
+    }
+
+    .rated-a {
+        grid-area: retad-a;
+        justify-self: start;
+    }
+
+    .rated-b {
+        justify-self: center;
+        grid-area: retad-b;
+    }
+
+    .rated-c {
+        grid-area: retad-c;
+        justify-self: end;
+    }
+
+    .cards {
+        grid-area: cards;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+            "card-a card-a card-b card-b card-c card-c"
+        ;
+        
+    }
+
+    .card {
+        width: 95%;
+        height: 80%;
+    }
+
+    .card-a {
+        grid-area: card-a;
+        align-self: start;       
+    }
+
+    .card-b {
+        grid-area: card-b;
+        align-self: center;  
+        justify-self: center;      
+    }
+
+    .card-c {
+        grid-area: card-c;
+        align-self: end;
+        justify-self: end;     
+    }
 }
