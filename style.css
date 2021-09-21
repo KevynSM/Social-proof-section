@@ -29,7 +29,7 @@ body {
     background-size: 100%;    
 }
 
-.container {
+main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 20% 28% 52%;
@@ -150,7 +150,7 @@ body {
         background-position: top -100px left 0px, bottom -30px right 0px;
     }
     
-    .container {
+    main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 40% 6% 47%;        
